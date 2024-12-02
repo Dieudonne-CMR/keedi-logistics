@@ -18,19 +18,19 @@
                   <a class="nav-link text-uppercase" href="#">Accueil</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#about">autheur</a>
+                  <a class="nav-link text-uppercase" href="#about">Auteur</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#overview">Chaptre</a>
+                  <a class="nav-link text-uppercase" href="#overview">Contenu</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link text-uppercase" href="#buynow">Acheter </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="/point_vente">Point vente</a>
+                  <a class="nav-link text-uppercase" href="point_vente">Point vente</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#review">Revue</a>
+                  <a class="nav-link text-uppercase" href="#review">Blog</a>
                </li>
                <?php /*
                <li class="nav-item">

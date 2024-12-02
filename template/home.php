@@ -17,6 +17,7 @@
    <link rel="apple-touch-icon" sizes="72x72" href="<?=$lien_logo . $logo ?>">
    <link rel="apple-touch-icon" sizes="114x114" href="<?=$lien_logo . $logo ?>">
    <!-- bootstrap -->
+   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
    <link rel="stylesheet" href="css/bootstrap.min.css" />
    <!-- animation -->
    <link rel="stylesheet" href="css/animate.css" />
@@ -174,20 +175,87 @@
    </section>
    <!-- end overview section -->
    <!-- buynow section -->
-   <section id="buynow" class="bg-gray-light p-120">
+   <section id="buynow" class="bg-gray-light1"> 
       <div class="container">
          <div class="row">
             <div class="col-lg-5 col-md-4 col-sm-6 xs-margin-btm-10 text-right">
                <img src="<?= $image_banniere . $img_banniere2 ?>" class="img-responsive wow fadeInLeft" alt="" />
             </div>
             <div class="col-lg-6 col-md-8 offset-lg-1">
-               <h1 class="font-oswald"><?= $titre_banniere2 ?></h1>
-               <h3 class="margin-top5"> Seulement <span class="price-text"><?= $prix ?> <?= $iso ?></span></h3>
+               <h1 class="font-oswald" style="color:white; margin-top:5%;"><?= $titre_banniere2 ?></h1>
+               <h3 class="margin-top5" style="color:white;"> Seulement <span class="price-text"><?= $prix ?> <?= $iso ?></span></h3>
                <a href="<?= $retour_sur_lien ?>/point_vente" target="_blank"
                   class="internal-link btn med-btn price-btn margin-top5 margin-right-zero rounded-0 font-weight6 text-uppercase">Commendez Maintenat</a>
-               <p class="med-text  margin-top5"><?= $description_banniere2 ?>
-               </p>
-
+              <?php /* <p class="med-text  margin-top5"><?= $description_banniere2 ?>
+               </p> 
+              <div class="med-text margin-top5">
+                <div id="p1">
+                  <div id="p11">
+                    <div id="pimg1">
+                      <img src="" id="img" alt="image ici">
+                    </div> 
+                    <div id="ptx"> 
+                      <span id="sp1"> VILLE : <span> Douala </span></span>
+                      <span id="sp2"> QUARTIER : <span> AKWA </span></span>
+                      <span id="sp3"> TÉLÉPHONE : <span> +237 690 90 90 90 </span></span>
+                      <button id="b1">CONTACTEZ-MAINTENANT </button> 
+                    </div>
+                  </div>
+                  <div id="p12">
+                    <div id="pimg2">
+                      <img src="" id="img" alt="image ici">
+                    </div> 
+                    <div id="ptx"> 
+                      <span id="sp1"> VILLE : <span> Douala </span></span>
+                      <span id="sp2"> QUARTIER : <span> AKWA </span></span>
+                      <span id="sp3"> TÉLÉPHONE : <span> +237 690 90 90 90 </span></span>
+                      <button id="b1"> CONTACTEZ-MAINTENANT </button> 
+                    </div>
+                  </div>
+              </div>
+                 */ ?>
+            <div class="p1" style="float:left; width:38rem; height:25rem; overflow-y:scroll; margin:5% 0;">
+             <div style="width:37rem; float:left; margin:1% 0;">
+               <div class="card img1" style="width: 18rem; float:left;">
+                 <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                 <div class="card-body">
+                  <h5 class="card-title sp">VILLE: <span class="sp1"> Douala</span></h5>
+                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> AKWA</span></h5>
+                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                 </div>
+               </div>
+               <div class="card " style="width: 18rem; float:right;">
+                 <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                 <div class="card-body">
+                  <h5 class="card-title sp">VILLE: <span class="sp1"> Douala</span></h5>
+                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> LOGPOM</span></h5>
+                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                 </div>
+               </div>
+              </div>
+              <div class="p1" style="width:37rem; float:left; margin:1% 0;">
+               <div class="card" style="width: 18rem; float:left;">
+                  <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title sp">VILLE: <span class="sp1"> Yaounde</span></h5>
+                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> ODZA</span></h5>
+                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                 </div>
+               </div>
+               <div class="card " style="width: 18rem; float:right;">
+                  <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                  <div class="card-body">
+                  <h5 class="card-title sp">VILLE: <span class="sp1"> Yaounde</span></h5>
+                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> MENDONG</span></h5>
+                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                 </div>
+               </div>
+              </div>
+            </div>
                <br>
                   <div class="col-lg-5 col-md-4 col-sm-6 xs-margin-btm-10 text-right">
                      <img src="https://th.bing.com/th/id/OIP.Y7xiOOrAdle-vZHAxdDulAHaDa?w=590&h=272&rs=1&pid=ImgDetMain" style="height: 100px;" class="img-responsive wow fadeInLeft" alt="" />
@@ -195,7 +263,7 @@
             </div>
          </div>
       </div>
-   </section>
+  </section> 
    <!-- end buynow section-->
    <!-- counter section -->
    <section id="counter" class="wow fadeIn p-120">
@@ -231,54 +299,81 @@
    <!-- end counter section -->
 
    <!-- review section -->
-   <section id="review" class="p-120 bg-gray-light">
+   <section id="review" class="bg-gray-light1">
       <div class="container">
          <div class="row">
             <!-- section title -->
             <div class="col-12 text-center zero-padding">
-               <h3 class="section-heading text-black">Temoignqge</h3>
-               <div class="med-text text-uppercase letter-space2">MOTS AIMABLES DES LECTEURS</div>
+               <h3 class="section-heading" style="color:white; margin-top:5%;">Temoignage</h3>
+               <div class="med-text text-uppercase letter-space2" style="color:white;">MOTS AIMABLES DES LECTEURS</div>
                <div class="bg-gray-md margin-top-btm-1 line-sep"></div>
             </div>
             <!-- end section title -->
          </div>
          <div class="row margin-top5 wow fadeIn xs-margin-top-10">
             <!-- review -->
-            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5">
+            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
-               <p class="center-col">C'est un ouvrage pratique et pédagogique. Il couvre l'ensemble des aspects essentiels du métier, ce qui en 
+               <p class="center-col" style="color:white;">C'est un ouvrage pratique et pédagogique. Il couvre l'ensemble des aspects essentiels du métier, ce qui en 
                   fait une ressource précieuse pour les transitaires, déclarants, et responsables logistiques. </p>
-               <div class="name text-black">Ricky Harvard</div>
-               <div class="text-gray">Responsables logistiques</div>
+               <div class="name" style="color:white;">Ricky Harvard</div>
+               <div  style="color:white;">Responsables logistiques</div>
             </div>
-            <!-- end review -->
+            <!-- end review class="text-gray" this class come from the last balise-->
             <!-- review -->
-            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5">
+            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
-               <p class="center-col">Ce livre explique de manière simple et détaillée les bases de la douane et du transit.
+               <p class="center-col" style="color:white;">Ce livre explique de manière simple et détaillée les bases de la douane et du transit.
                    Grâce à ses cas pratiques et son lexique.</p>
-               <div class="name text-black">Sarah Miller</div>
-               <div class="text-gray">Déclarants</div>
+               <div class="name" style="color:white;">Sarah Miller</div>
+               <div  style="color:white;">Déclarants</div>
             </div>
             <!-- end review -->
             <!-- review -->
-            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-10">
+            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-10" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
-               <p class="center-col">L'accent mis sur les accords économiques régionaux, comme les APE, 
+               <p class="center-col" style="color:white;">L'accent mis sur les accords économiques régionaux, comme les APE, 
                   et sur les spécificités du commerce en Afrique, est un véritable atout</p>
-               <div class="name text-black">Biyong</div>
-               <div class="text-gray">transitaire</div>
+               <div class="name " style="color:white;">Biyong</div>
+               <div  style="color:white;">transitaire</div>
             </div>
             <!-- end review -->
             <!-- review -->
-            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-10">
+            <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-10" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
-               <p class="center-col">Le livre fournit des techniques concrètes pour gérer les formalités douanières, comprendre les régimes de transit, et optimiser les opérations de dédouanement</p>
-               <div class="name text-black">Eboa</div>
-               <div class="text-gray">transitaire</div>
+               <p class="center-col" style="color:white;">Le livre fournit des techniques concrètes pour gérer les formalités douanières, comprendre les régimes de transit, et optimiser les opérations de dédouanement</p>
+               <div class="name " style="color:white;">Eboa</div>
+               <div  style="color:white;">transitaire
+               <div class="container mt-5 bt2"> 
+                  <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
+               </div>
+               </div>
             </div>
             <!-- end review -->
          </div>
+      </div>
+      <div id="overlay" class="overlay"></div>
+      <div id="floatingForm"> 
+        <form id="myForm"> 
+          <div class="form-group"> 
+            <label for="name">Nom:</label> 
+              <input type="text" class="form-control" id="name" name="name" required> 
+          </div>
+          <div class="form-group"> 
+            <label for="name">Prénom:</label> 
+              <input type="text" class="form-control" id="name" name="name" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="name">Profession:</label> 
+              <input type="text" class="form-control" id="name" name="name" required> 
+          </div> 
+          <div class="form-group"> 
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" name="message" rows="4" required>
+            </textarea>
+          </div> 
+          <button type="submit" class="btn btn-success">Enregistrer</button> 
+         </form> 
       </div>
    </section>
    <!-- end review section -->
@@ -423,7 +518,22 @@
    <!-- footer -->
   <?php include "includes/footer.php" ?>
    <!-- footer end -->
-
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+   <script> document.getElementById('showFormBtn').addEventListener('click', function() { 
+    document.getElementById('floatingForm').style.display = 'block'; 
+    document.getElementById('overlay').style.display = 'block'; }); 
+    document.getElementById('overlay').addEventListener('click', function() { 
+    document.getElementById('floatingForm').style.display = 'none'; 
+    document.getElementById('overlay').style.display = 'none'; }); 
+    document.getElementById('myForm').addEventListener('submit', function(event) { 
+    event.preventDefault(); 
+    // Empêche l'envoi réel du formulaire 
+    alert('Formulaire enregistré avec succès!'); 
+    document.getElementById('floatingForm').style.display = 'none'; 
+    document.getElementById('overlay').style.display = 'none'; }); 
+    </script>
    <!-- javaScripts -->
    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
