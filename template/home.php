@@ -1,4 +1,6 @@
-<?php include_once('includes/main_header.php') ?>
+<?php include_once('includes/main_header.php'); 
+include "includes/connexion.php";
+?>
 <!doctype html>
 <html class="no-js" lang="en">
    
@@ -44,7 +46,6 @@
    <!-- end of pre loader-->
    <!-- navigation menu -->
  <?php include "includes/header.php" ?>
-
 
 
    <!-- navigation end -->
@@ -353,26 +354,26 @@
          </div>
       </div>
       <div id="overlay" class="overlay"></div>
-      <div id="floatingForm"> 
-        <form id="myForm"> 
+      <div id="floatingForm" class="w-75 mx-auto"> 
+        <form id="myForm" class="w-75 mx-auto" enctype="multipart/form-data"> 
           <div class="form-group"> 
             <label for="name">Nom:</label> 
               <input type="text" class="form-control" id="name" name="name" required> 
           </div>
           <div class="form-group"> 
-            <label for="name">Prénom:</label> 
-              <input type="text" class="form-control" id="name" name="name" required> 
-          </div> 
-          <div class="form-group"> 
             <label for="name">Profession:</label> 
               <input type="text" class="form-control" id="name" name="name" required> 
           </div> 
+          <div class="form-group text-center">
+          <label for="name" class="btn btn-primary">Choisir une image</label>
+         <input type="file" class="form-control" id="name" name="name" accept="image/*" onchange="previewImage(event)">
+           </div>
           <div class="form-group"> 
             <label for="message">Message:</label>
             <textarea class="form-control" id="message" name="message" rows="4" required>
             </textarea>
           </div> 
-          <button type="submit" class="btn btn-success">Enregistrer</button> 
+          <button type="submit" class="btn btn-success">Enregistrer </button> 
          </form> 
       </div>
    </section>
@@ -534,6 +535,25 @@
     document.getElementById('floatingForm').style.display = 'none'; 
     document.getElementById('overlay').style.display = 'none'; }); 
     </script>
+    <script>
+  // Fonction pour prévisualiser l'image téléchargée
+  function previewImage(event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function(e) {
+        const profileImg = document.getElementById('profileImg');
+        profileImg.src = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
+  // Event listener pour ouvrir le champ de fichier lorsque l'image par défaut est cliquée
+  document.getElementById('profileImg').addEventListener('click', function() {
+    document.getElementById('profileImage').click();
+  });
+</script>
    <!-- javaScripts -->
    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>

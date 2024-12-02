@@ -21,16 +21,13 @@
                   <a class="nav-link text-uppercase" href="#about">Auteur</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#overview">Contenu</a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#buynow">Acheter </a>
-               </li>
+                  <a class="nav-link text-uppercase" href="#overview">Contenus</a>
+               </li>              
                <li class="nav-item">
                   <a class="nav-link text-uppercase" href="point_vente">Point vente</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#review">Blog</a>
+                  <a class="nav-link text-uppercase" href="#review">Actualités</a>
                </li>
                <?php /*
                <li class="nav-item">
