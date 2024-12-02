@@ -1,10 +1,10 @@
 <nav class="navbar navbar-expand-lg nav-transparent nav-white navbar-fixed-top navbar overlay-nav no-transition navbar-default 
      nav-border-bottom fixed-nav py-0" style="background: white;">
       <div class="container gx-lg-0 align-items-center">
-         <a class="logo-bright" href="<?= $retour_sur_lien ?>">
+         <a class="logo-bright" href="">
             <img src="<?=$lien_logo . $logo ?>" class="ebook-logo" alt="" />
          </a>
-         <a class="logo-dark" href="<?= $retour_sur_lien ?>">
+         <a class="logo-dark" href="">
             <img src="<?= $lien_logo . $logo ?>" class="ebook-logo" alt="" />
          </a>
          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
@@ -15,29 +15,29 @@
             <ul class="navbar-nav ms-auto mb-0">
 
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#">Accueil</a>
+                  <a class="nav-link text-uppercase" href="#">Accueil</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#about">autheur</a>
+                  <a class="nav-link text-uppercase" href="#about">autheur</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#overview">Chaptre</a>
+                  <a class="nav-link text-uppercase" href="#overview">Chaptre</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#buynow">Acheter </a>
+                  <a class="nav-link text-uppercase" href="#buynow">Acheter </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>/point_vente">Point vente</a>
+                  <a class="nav-link text-uppercase" href="/point_vente">Point vente</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#review">Revue</a>
+                  <a class="nav-link text-uppercase" href="#review">Revue</a>
                </li>
                <?php /*
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#blog">blog</a>
+                  <a class="nav-link text-uppercase" href="#blog">blog</a>
                </li> */?>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="<?= $retour_sur_lien ?>#contact">contact</a>
+                  <a class="nav-link text-uppercase" href="#contact">contact</a>
                </li>
 
             </ul>
