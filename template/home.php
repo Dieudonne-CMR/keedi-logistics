@@ -4,7 +4,7 @@
    
    <!-- Mirrored from frix.themes95.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 10:33:09 GMT -->
    <head>
-   <?php include_once('includes/base.php') ?>
+   <?php /*include_once('includes/base.php') */?>
    <title><?= $nom_entreprise ?></title>
    <meta name="description" content="<?= $nom_entreprise ?>, <?= $description ?>">
    <meta name="keywords" content="<?= $nom_entreprise ?>  <?= $description ?>">
