@@ -1,5 +1,5 @@
-<?php include_once('includes/main_header.php'); 
-include "includes/connexion.php";
+<?php 
+// include "includes/connexion.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -61,7 +61,7 @@ include "includes/connexion.php";
                      <div class="text-hero padding-lr-15 wow fadeInLeft hero-mid-text">
                         <div class="col-md-5 col-9  text-start zero-padding animated fadeInLeft">
                            <h1><?= $titre_banniere1 ?> </h1>
-                           <span class="text-white"><?=$description_banniere1 ?></span>
+                           <span class="text-white"><?=$description_banniere1 ?> <?php ?></span>
                            <a class="btn btn-black internal-link zero-lr-margin zero-margin-bottom text-uppercase font-weight6 rounded-0"
                               href="#buynow">Commendez Maintenant !</a>
                         </div>
@@ -185,7 +185,7 @@ include "includes/connexion.php";
             <div class="col-lg-6 col-md-8 offset-lg-1">
                <h1 class="font-oswald" style="color:white; margin-top:5%;"><?= $titre_banniere2 ?></h1>
                <h3 class="margin-top5" style="color:white;"> Seulement <span class="price-text"><?= $prix ?> <?= $iso ?></span></h3>
-               <a href="<?= $retour_sur_lien ?>/point_vente" target="_blank"
+               <a href="point_vente" target="_blank"
                   class="internal-link btn med-btn price-btn margin-top5 margin-right-zero rounded-0 font-weight6 text-uppercase">Commendez Maintenat</a>
               <?php /* <p class="med-text  margin-top5"><?= $description_banniere2 ?>
                </p> 
@@ -452,12 +452,12 @@ include "includes/connexion.php";
                   <div class="col-md-4 col-sm-4 xs-margin-btm-10  xs-text-center">
                      <div class="blog-updates">
                         <div class="img-blog-updates">
-                           <a href="<?=$retour_sur_lien.'/'.titre($value->titre).'-'.$value->matricule ?>">
+                           <a href=.titre($value->titre).'-'.$value->matricule ?>">
                               <img src="<?=$url_image.$value->photo ?>" alt="">
                            </a>
                         </div>
                         <div class="post-details">
-                           <a href="<?=$retour_sur_lien.'/'.titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
+                           <a href=.titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
                            <span class="post-author xs-margin-top4">| <strong><?= $value->date ?></strong> | <?= info_admin($value->matricule_admin)->nom ?></span>
                            <p><?= strTextLent(strip_tags($value->content), 50) ?></p>
                         </div>

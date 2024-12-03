@@ -1,7 +1,7 @@
 <?php 
-// include "includes/main_header/main_header.php" ;  
 include "api/cle_api.php";
 include "includes/fonctions/fonctions.php";
+include_once('includes/main_header.php'); 
 //======
 
 

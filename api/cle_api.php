@@ -98,7 +98,7 @@ $discription_s2 =       @$dataEntreprise->description_s2;
 $titre_s3   =           @$dataEntreprise->titre_s3;
 $discription_s3 =       @$dataEntreprise->description_s3;
 //--------------- Apropos
-$apropos_entreprise=    @$dataEntreprise->propos;
+$apropos_de_lentreprise=    @$dataEntreprise->propos;
 $image_about =          @$dataEntreprise->banniere_site1;
 //------------- Motivation
 $motivation_titre =     @$dataEntreprise->motivation_titre;
