@@ -26,6 +26,9 @@ if(@$url[0]=='about' ):
     include_once("template/$url[0].php");
 endif;
 
+if(@$url[0]=='point_vente' ):
+    include_once("template/$url[0].php");
+endif;
 //------- Route page boutique
 
 

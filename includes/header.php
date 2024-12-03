@@ -1,3 +1,5 @@
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 <nav class="navbar navbar-expand-lg nav-transparent nav-white navbar-fixed-top navbar overlay-nav no-transition navbar-default 
      nav-border-bottom fixed-nav py-0" style="background: white;">
       <div class="container gx-lg-0 align-items-center">
@@ -18,19 +20,19 @@
                   <a class="nav-link text-uppercase" href="#">Accueil</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#about">autheur</a>
+                  <a class="nav-link text-uppercase" href="#about">Auteur</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#overview">Chaptre</a>
+                  <a class="nav-link text-uppercase" href="#overview">Contenu</a>
                </li>
                <li class="nav-item">
                   <a class="nav-link text-uppercase" href="#buynow">Acheter </a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="/point_vente">Point vente</a>
+                  <a class="nav-link text-uppercase" href="point_vente">Point vente</a>
                </li>
                <li class="nav-item">
-                  <a class="nav-link text-uppercase" href="#review">Revue</a>
+                  <a class="nav-link text-uppercase" href="#review">Blog</a>
                </li>
                <?php /*
                <li class="nav-item">
