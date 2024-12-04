@@ -1,3 +1,5 @@
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+
 <nav class="navbar navbar-expand-lg nav-transparent nav-white navbar-fixed-top navbar overlay-nav no-transition navbar-default 
      nav-border-bottom fixed-nav py-0" style="background: white;">
       <div class="container gx-lg-0 align-items-center">

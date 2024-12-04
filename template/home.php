@@ -1,5 +1,5 @@
-<?php include_once('includes/main_header.php'); 
-include "includes/connexion.php";
+<?php 
+// include "includes/connexion.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -61,7 +61,7 @@ include "includes/connexion.php";
                      <div class="text-hero padding-lr-15 wow fadeInLeft hero-mid-text">
                         <div class="col-md-5 col-9  text-start zero-padding animated fadeInLeft">
                            <h1><?= $titre_banniere1 ?> </h1>
-                           <span class="text-white"><?=$description_banniere1 ?></span>
+                           <span class="text-white"><?=$description_banniere1 ?> <?php ?></span>
                            <a class="btn btn-black internal-link zero-lr-margin zero-margin-bottom text-uppercase font-weight6 rounded-0"
                               href="#buynow">Commendez Maintenant !</a>
                         </div>
@@ -185,7 +185,7 @@ include "includes/connexion.php";
             <div class="col-lg-6 col-md-8 offset-lg-1">
                <h1 class="font-oswald" style="color:white; margin-top:5%;"><?= $titre_banniere2 ?></h1>
                <h3 class="margin-top5" style="color:white;"> Seulement <span class="price-text"><?= $prix ?> <?= $iso ?></span></h3>
-               <a href="<?= $retour_sur_lien ?>/point_vente" target="_blank"
+               <a href="point_vente" target="_blank"
                   class="internal-link btn med-btn price-btn margin-top5 margin-right-zero rounded-0 font-weight6 text-uppercase">Commendez Maintenat</a>
               <?php /* <p class="med-text  margin-top5"><?= $description_banniere2 ?>
                </p> 
@@ -215,48 +215,85 @@ include "includes/connexion.php";
                   </div>
               </div>
                  */ ?>
-            <div class="p1" style="float:left; width:38rem; height:25rem; overflow-y:scroll; margin:5% 0;">
-             <div style="width:37rem; float:left; margin:1% 0;">
-               <div class="card img1" style="width: 18rem; float:left;">
-                 <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
-                 <div class="card-body">
-                  <h5 class="card-title sp">VILLE: <span class="sp1"> Douala</span></h5>
-                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> AKWA</span></h5>
-                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
-                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
-                 </div>
+               <div class=" col-md-12 pt-4">
+                        
+                  <div class="row">
+                     
+                     <div class="card img1 col-md-6" >
+                       <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                       <div class="card-body">
+                        <h5 class="card-title">VILLE: <span class="sp1"> Douala</span></h5>
+                        <h6 class="card-title">1) <span class="sp1"> Centre keedi logistics (DEIDO)</span></h6>
+                        <h6 class="card-title">TÉL: <span class="sp1"> +237 690 90 90 90</span></h6>
+                        <h6 class="card-title">TÉL: <span class="sp1"> +237 680 28 40 64</span></h6>
+                        <a href="http://tel:237690909090" target="_blank" class="btn btn-primary" rel="noopener noreferrer"> Contacter</a> <i class='fas fa-phone-volume'></i>
+                        
+                        <!-- <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a> -->
+                       </div>
+                     </div>
+                     
+                     <div class="card img1 col-md-6" >
+                       <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                       <div class="card-body">
+                        <h5 class="card-title">VILLE: <span class="sp1"> Douala</span></h5>
+                        <h6 class="card-title">2) <span class="sp1"> LIPACAM (AKWA)</span></h6>
+                        <h6 class="card-title">TÉL: <span class="sp1"> +237 699 83 97 21</span></h6>
+                        <!-- <h6 class="card-title">TÉL: <span class="sp1"> +237 680 28 40 64</span></h6> -->
+                        <a href="http://tel:237690909090" style='font-size:15px' target="_blank" class="btn btn-primary" rel="noopener noreferrer"> Contacter</a> <i class='fas fa-phone-volume'></i>
+                        
+                        <!-- <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a> -->
+                       </div>
+                     </div>
+                  </div>
+
                </div>
-               <div class="card " style="width: 18rem; float:right;">
-                 <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
-                 <div class="card-body">
-                  <h5 class="card-title sp">VILLE: <span class="sp1"> Douala</span></h5>
-                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> LOGPOM</span></h5>
-                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
-                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
-                 </div>
-               </div>
-              </div>
-              <div class="p1" style="width:37rem; float:left; margin:1% 0;">
-               <div class="card" style="width: 18rem; float:left;">
-                  <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
-                  <div class="card-body">
-                  <h5 class="card-title sp">VILLE: <span class="sp1"> Yaounde</span></h5>
-                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> ODZA</span></h5>
-                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
-                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
-                 </div>
-               </div>
-               <div class="card " style="width: 18rem; float:right;">
-                  <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
-                  <div class="card-body">
-                  <h5 class="card-title sp">VILLE: <span class="sp1"> Yaounde</span></h5>
-                  <h5 class="card-title sp">QUARTIER: <span class="sp1"> MENDONG</span></h5>
-                  <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
-                  <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
-                 </div>
-               </div>
-              </div>
-            </div>
+               <?php /*<div class="p1" style="float:left; width:38rem; height:25rem; overflow-y:scroll; margin:5% 0;">
+                  <div style="width:37rem; float:left; margin:1% 0;">
+                     <div class="card img1" style="width: 18rem; float:left;">
+                        <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title sp">VILLE: <span class="sp1"> Douala</span></h5>
+                        <h5 class="card-title sp">QUARTIER: <span class="sp1"> AKWA</span></h5>
+                        <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                        <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                        </div>
+                     </div>
+                           
+                     <div class="card " style="width: 18rem; float:right;">
+                        <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title sp">VILLE: <span class="sp1"> Douala</span></h5>
+                        <h5 class="card-title sp">QUARTIER: <span class="sp1"> LOGPOM</span></h5>
+                        <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                        <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                        </div>
+                     </div>
+                     
+                  </div>
+
+                  <div class="p1" style="width:37rem; float:left; margin:1% 0;">
+                     <div class="card" style="width: 18rem; float:left;">
+                        <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title sp">VILLE: <span class="sp1"> Yaounde</span></h5>
+                        <h5 class="card-title sp">QUARTIER: <span class="sp1"> ODZA</span></h5>
+                        <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                        <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                     </div>
+                     </div>
+                     <div class="card " style="width: 18rem; float:right;">
+                        <img src="https://th.bing.com/th/id/OIP.tZogi1VaUsJxy_xbA_ryUQHaEH?rs=1&pid=ImgDetMain" class="card-img-top img2" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title sp">VILLE: <span class="sp1"> Yaounde</span></h5>
+                        <h5 class="card-title sp">QUARTIER: <span class="sp1"> MENDONG</span></h5>
+                        <h5 class="card-title sp">TÉLÉPHONE: <span class="sp1"> +237 690 90 90 90</span></h5>
+                        <a href="#" class="btn btn-primary sp">CONTACTEZ-MAINTENANT</a>
+                     </div>
+                     </div>
+                  </div>
+
+               </div> */?>
+            
                <br>
                   <div class="col-lg-5 col-md-4 col-sm-6 xs-margin-btm-10 text-right">
                      <img src="https://th.bing.com/th/id/OIP.Y7xiOOrAdle-vZHAxdDulAHaDa?w=590&h=272&rs=1&pid=ImgDetMain" style="height: 100px;" class="img-responsive wow fadeInLeft" alt="" />
@@ -313,22 +350,36 @@ include "includes/connexion.php";
          </div>
          <div class="row margin-top5 wow fadeIn xs-margin-top-10">
             <!-- review -->
+             <?php /* $recup= $DB->query("SELECT * FROM témoignage");
+             $part="Profil/Temoignage/";
+             while($result=$recup->fetch()){
+             ?>
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
-               <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
-               <p class="center-col" style="color:white;">C'est un ouvrage pratique et pédagogique. Il couvre l'ensemble des aspects essentiels du métier, ce qui en 
-                  fait une ressource précieuse pour les transitaires, déclarants, et responsables logistiques. </p>
-               <div class="name" style="color:white;">Ricky Harvard</div>
-               <div  style="color:white;">Responsables logistiques</div>
+               <img alt="" src="<?=$part.$result['ProfilTémoignage']?>">
+               <p class="center-col" style="color:white;"><?=$result['MessageTémoignage']?> </p>
+               <div class="name" style="color:white;"><?=$result['NomTémoignage']?> </div>
+               <div  style="color:white;"><?=$result['ProfessionTémoignage']?> 
+               <div class="container mt-5 bt2"> 
+                  <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
+               </div>
+               </div>
             </div>
+            <?php };*/ ?> 
             <!-- end review class="text-gray" this class come from the last balise-->
             <!-- review -->
+            
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
                <p class="center-col" style="color:white;">Ce livre explique de manière simple et détaillée les bases de la douane et du transit.
                    Grâce à ses cas pratiques et son lexique.</p>
                <div class="name" style="color:white;">Sarah Miller</div>
-               <div  style="color:white;">Déclarants</div>
+               <div  style="color:white;">Déclarants
+               <div class="container mt-5 bt2"> 
+                  <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
+               </div>
+               </div>
             </div>
+            <?php /*
             <!-- end review -->
             <!-- review -->
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-10" style="color:white;">
@@ -349,13 +400,13 @@ include "includes/connexion.php";
                   <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
                </div>
                </div>
-            </div>
+            </div> */ ?>
             <!-- end review -->
          </div>
       </div>
       <div id="overlay" class="overlay"></div>
-      <div id="floatingForm" class="w-75 mx-auto rounded"> 
-        <form id="myForm" class="w-75 mx-auto" enctype="multipart/form-data"> 
+      <div id="floatingForm"  class="w-75 mx-auto rounded"> 
+        <form id="myForm" class="w-75 mx-auto" action="saveform" method="post" enctype="multipart/form-data"> 
           <div class="form-group"> 
             <label for="name">Nom:</label> 
               <input type="text" class="form-control" id="name" name="name" required> 
@@ -363,7 +414,7 @@ include "includes/connexion.php";
           <div class="row">          
             <div class="form-group col-6"> 
                <label for="name">Profession:</label> 
-               <input type="text" class="form-control" id="name" name="name" required> 
+               <input type="text" class="form-control" id="name" name="profession" required> 
             </div> 
             <div class="form-group col-6">               
                   <label for="name">Ajouter une image:</label>              
@@ -375,7 +426,7 @@ include "includes/connexion.php";
             <textarea class="form-control" id="message" name="message" rows="4" required>
             </textarea>
           </div> 
-          <button type="submit" class="btn btn-success w-100">Enregistrer </button> 
+          <button type="submit" name="submit" class="btn btn-success w-100">Enregistrer </button> 
          </form> 
       </div>
    </section>
@@ -417,12 +468,12 @@ include "includes/connexion.php";
                   <div class="col-md-4 col-sm-4 xs-margin-btm-10  xs-text-center">
                      <div class="blog-updates">
                         <div class="img-blog-updates">
-                           <a href="<?=$retour_sur_lien.'/'.titre($value->titre).'-'.$value->matricule ?>">
+                           <a href=.titre($value->titre).'-'.$value->matricule ?>">
                               <img src="<?=$url_image.$value->photo ?>" alt="">
                            </a>
                         </div>
                         <div class="post-details">
-                           <a href="<?=$retour_sur_lien.'/'.titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
+                           <a href=.titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
                            <span class="post-author xs-margin-top4">| <strong><?= $value->date ?></strong> | <?= info_admin($value->matricule_admin)->nom ?></span>
                            <p><?= strTextLent(strip_tags($value->content), 50) ?></p>
                         </div>
@@ -531,7 +582,7 @@ include "includes/connexion.php";
     document.getElementById('floatingForm').style.display = 'none'; 
     document.getElementById('overlay').style.display = 'none'; }); 
     document.getElementById('myForm').addEventListener('submit', function(event) { 
-    event.preventDefault(); 
+    //event.preventDefault(); 
     // Empêche l'envoi réel du formulaire 
     alert('Formulaire enregistré avec succès!'); 
     document.getElementById('floatingForm').style.display = 'none'; 
