@@ -350,24 +350,24 @@
          </div>
          <div class="row margin-top5 wow fadeIn xs-margin-top-10">
             <!-- review -->
-             <?php /* $recup= $DB->query("SELECT * FROM témoignage");
-             $part="Profil/Temoignage/";
-             while($result=$recup->fetch()){
-             ?>
+             <?php
+              $recup= $DB->query("SELECT * FROM temoignage");
+              $part="Profil/Temoignages/";
+              foreach($recup as $result) :
+             ?> 
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
-               <img alt="" src="<?=$part.$result['ProfilTémoignage']?>">
-               <p class="center-col" style="color:white;"><?=$result['MessageTémoignage']?> </p>
-               <div class="name" style="color:white;"><?=$result['NomTémoignage']?> </div>
-               <div  style="color:white;"><?=$result['ProfessionTémoignage']?> 
-               <div class="container mt-5 bt2"> 
-                  <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
-               </div>
-               </div>
+               <img alt="image" style="height:120px; width:150px" src="<?=$part.$result->ProfilTemoignage?>">
+               <p class="center-col" style="color:white; word-wrap:break-word; overflow-wrap:break-word; word-break:break-all;"><?=$result->MessageTemoignage ?> </p>
+               <div class="name" style="color:white;"><?=$result->NomTemoignage?> </div>
+               <div  style="color:white; margin-bottom:10%;"><?=$result->ProfessionTemoignage?> </div>
             </div>
-            <?php };*/ ?> 
+            <?php endforeach ?> 
+            <div class="container mt-5 bt2"> 
+               <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
+            </div>
             <!-- end review class="text-gray" this class come from the last balise-->
             <!-- review -->
-            
+            <?php /* 
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
                <p class="center-col" style="color:white;">Ce livre explique de manière simple et détaillée les bases de la douane et du transit.
@@ -379,7 +379,6 @@
                </div>
                </div>
             </div>
-            <?php /*
             <!-- end review -->
             <!-- review -->
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-10" style="color:white;">
@@ -430,7 +429,7 @@
          </form> 
       </div>
    </section>
-   <!-- end review section -->
+   <!-- end review section accept="image/*" onchange="previewImage(event) -->
 
    <!-- buynow section -->
    <section id="buynow" class=" p-120">
@@ -468,12 +467,12 @@
                   <div class="col-md-4 col-sm-4 xs-margin-btm-10  xs-text-center">
                      <div class="blog-updates">
                         <div class="img-blog-updates">
-                           <a href=.titre($value->titre).'-'.$value->matricule ?>">
-                              <img src="<?=$url_image.$value->photo ?>" alt="">
+                           <a href="<?=titre($value->titre).'-'.$value->matricule ?>">
+                              <img style="" src="<?=$url_image.$value->photo ?>" alt="">
                            </a>
                         </div>
                         <div class="post-details">
-                           <a href=.titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
+                           <a href="<?=titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
                            <span class="post-author xs-margin-top4">| <strong><?= $value->date ?></strong> | <?= info_admin($value->matricule_admin)->nom ?></span>
                            <p><?= strTextLent(strip_tags($value->content), 50) ?></p>
                         </div>
@@ -554,15 +553,14 @@
                <p class="text-gray margin-top5"><?= $description ?></p>
             </div>
             <div class="offset-lg-2 col-lg-6 col-12 margin-top5">
-               <form id="contactusform" action="javascript:void(0)" method="post" action="mailer.php">
+               <form id="contactusform" method="post" onsubmit="return validateEmail()" action="mailer">
                   <div id="alert" class="zero-lr-margin"></div>
-                  <input name="name" type="text" placeholder="votre nom" />
-                  <input name="email" type="email" placeholder="Enter Email" />
-                  <input type="text" placeholder="Entrer le numero Whatsapp" id="tel" name="tel" required>
-                  <textarea placeholder="Write your Message"  name="message"></textarea>
-                  <button id="contact-us-btn" type="submit"
-                     class="contact-btn btn sm-btn button xs-margin-btm-5 text-uppercase">Envoyer le 
-                     message</button>
+                  <input name="name" type="text" placeholder="Votre nom" />
+                  <input name="email" id="email" type="email" placeholder="Entrez L'e-mail" />
+                  <input type="tel" placeholder="Entrez le numéro Whatsapp" id="tel" name="tel" required>
+                  <textarea placeholder="Écrivez votre message"  name="message"></textarea>
+                  <button id="contact-us-btn" type="submit" name="submit" class=" rounded btn-success btn sm-btn button xs-margin-btm-5 text-uppercase">Envoyer le 
+                     message</button>  <p id="errorMessage" class="error" style="display:none;"></p>
                </form>
             </div>
          </div>
@@ -600,6 +598,7 @@
     }
 </script>
    <!-- javaScripts -->
+   <script type="text/javascript" src="js/verifemail.js"></script>
    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>

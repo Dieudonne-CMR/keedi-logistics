@@ -1,5 +1,4 @@
 <?php 
-//var_dump($_POST);
 if(isset($_POST['submit'])){
     $Nom=test_input($_POST['name']);
     $Profession = test_input($_POST['profession']);
@@ -19,6 +18,7 @@ if(isset($_POST['submit'])){
                 'MessageTemoignage'=>$Message 
             ]
         );
+        header("location:../keedi-logistics");
     }
 } 
 

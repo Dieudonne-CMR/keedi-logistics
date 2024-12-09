@@ -829,12 +829,15 @@ footer {
 }
 
 .img-blog-updates {
+   width:229.82px;
+   height: 174.09px;
    overflow: hidden;
-   width: auto;
 }
 
 .img-blog-updates img {
-   max-width: 101%
+   max-width: 100%;
+   background-size:100%;
+
 }
 
 /* -------------------------------
@@ -1078,8 +1081,13 @@ footer {
    display: none; 
 }
 .bt2{
-   margin-bottom: 5%;
+   margin-bottom: 3%;
    margin-top: -1%;
+   float: right;
+   display: flex;
+   justify-content: left;
+   align-items: center;
+   text-align: center;
 }
 /* only ie7, ie9, ie10, ie11 */
 @media screen\0 {}
