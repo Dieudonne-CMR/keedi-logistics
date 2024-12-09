@@ -14,7 +14,7 @@ if(!empty($nom) && !empty($email) && !empty($tel) && !empty($message)){
             'MessageContact'=>$message 
         ]
     );
-   // header("location:../keedi-logistics");
+   header("location:../keedi-logistics");
 }
 }
 
