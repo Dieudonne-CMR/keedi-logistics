@@ -1,5 +1,5 @@
 <?php 
-// include "includes/connexion.php";
+// include "includes/.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -467,12 +467,12 @@
                   <div class="col-md-4 col-sm-4 xs-margin-btm-10  xs-text-center">
                      <div class="blog-updates">
                         <div class="img-blog-updates">
-                           <a href="<?=titre($value->titre).'-'.$value->matricule ?>">
+                           <a href="blog-details/<?=$value->matricule?>">
                               <img style="" src="<?=$url_image.$value->photo ?>" alt="">
                            </a>
                         </div>
                         <div class="post-details">
-                           <a href="<?=titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
+                           <a href="blog-details/<?=$value->matricule?>" class="post-caption"><?= $value->titre ?></a>
                            <span class="post-author xs-margin-top4">| <strong><?= $value->date ?></strong> | <?= info_admin($value->matricule_admin)->nom ?></span>
                            <p><?= strTextLent(strip_tags($value->content), 50) ?></p>
                         </div>
@@ -553,7 +553,7 @@
                <p class="text-gray margin-top5"><?= $description ?></p>
             </div>
             <div class="offset-lg-2 col-lg-6 col-12 margin-top5">
-               <form id="contactusform" method="post" onsubmit="return validateEmail()" action="mailer">
+               <form id="contactusform" method="post" onsubmit="return validateEmail()" action="mailer1">
                   <div id="alert" class="zero-lr-margin"></div>
                   <input name="name" type="text" placeholder="Votre nom" />
                   <input name="email" id="email" type="email" placeholder="Entrez L'e-mail" />

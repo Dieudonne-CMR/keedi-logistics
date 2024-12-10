@@ -72,7 +72,7 @@ if(@$url[0]=='saveform'):
     include_once("processing/$url[0].php");
 endif;
 
-if(@$url[0]=='mailer'):    
+if(@$url[0]=='mailer1'):    
     include_once("processing/$url[0].php");
 endif;
 //------- Route page service

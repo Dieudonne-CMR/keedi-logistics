@@ -1,5 +1,5 @@
 <?php
-// $url_image="https://akila.blog/@ressouce/mg_etablissement/"; // lien des images des articles
+  $url_image="https://akila.blog/@ressouce/mg_etablissement/"; // lien des images des articles
 // $matricule_entreprise="654b7262c7d05";
 
 //===== recuper les tous les articles =====

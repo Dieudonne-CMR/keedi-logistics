@@ -6,7 +6,10 @@
    
    <!-- Mirrored from frix.themes95.com/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 15 Jul 2024 10:33:09 GMT -->
    <head>
-   <?php include_once('includes/base.php') ?>
+   <?php //include_once('includes/base.php')
+   
+    ?>
+   <base href="../">
    <title><?= $nom_entreprise ?> | <?= $blogs[0]->titre ?></title>
    <meta name="description" content="<?= $nom_entreprise ?> | <?= $blogs[0]->titre ?>">
    <meta name="keywords" content="<?= $nom_entreprise ?> | <?= $blogs[0]->titre ?> | <?= $mot_cles ?>" >
@@ -51,23 +54,23 @@
    <!-- navigation end -->
    <!-- hero img -->
    <section id="home" class="full-screen parallax fixed-parallax zero-padding">
-      <img class="parallax-hero-img" src=" <?= !empty($blogs[0]->photo) ? $chemin . $blogs[0]->photo :"images/01_preview.jpg" ?>" alt="" />
+      <img class="parallax-hero-img" src="<?= !empty($blogs[0]->photo) ? $chemin . $blogs[0]->photo :"images/01_preview.jpg" ?>" alt="" />
       <div class="bg-white display-none opacity-seven xs-display-block"></div>
       <div class="container" style="background-color: rgba(1, 1, 0, 0.5); max-width: 100%;">
          <div class="row" >
-            <div class="container position-relative full-screen">
+           <div class="container position-relative full-screen">
                <div class="hero-text-layout">
                   <div class="hero-img-text" >
                      <div class="text-hero padding-lr-15 wow fadeInLeft hero-mid-text">
                         <div class="col-md-5 col-12  text-start zero-padding animated fadeInLeft">
                            <h1><?= $blogs[0]->titre ?> </h1>
                         </div>
-                     </div>
-                  </div>
+                     </div> 
+                  </div> 
                </div>
-            </div>
-         </div>
-      </div>
+            </div> 
+         </div> 
+      </div> 
    </section>
    <!-- hero img end -->
    <!-- about section -->
