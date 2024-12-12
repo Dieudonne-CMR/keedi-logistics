@@ -93,8 +93,7 @@
             <!-- end about  -->
          </div>
       </div>
-   </section>
-   
+   </section>   
    <!-- footer -->
   <?php include "includes/footer.php" ?>
    <!-- footer end -->
