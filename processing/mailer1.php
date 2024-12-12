@@ -74,7 +74,7 @@
     }
  
 /*
-if(isset($_POST['submit'])){
+  if(isset($_POST['submit'])){
 $nom= test_input($_POST['name']);
 $email=test_input($_POST['email']);
 $tel = test_input($_POST['tel']);
