@@ -3,7 +3,7 @@
          <div class="container">
             <div class="row padding-top-btm-3">
                <!-- footer-copyrights -->
-               <div class="text-left col-md-6 col-sm-6 xs-text-center footer-copyrights letter-space1 xs-margin-btm-1"> Créaliser par <a href="http://www.akilaweb.net" target="_blank" rel="noopener noreferrer">Akila Web Factory</a>
+               <div class="text-left col-md-6 col-sm-6 xs-text-center footer-copyrights letter-space1 xs-margin-btm-1"> Réaliser par <a href="http://www.akilaweb.net" target="_blank" rel="noopener noreferrer">Akila Web Factory</a>
                   &copy; <?= date('Y') ?> &dash; Tous droits réservés..
                </div>
                <!-- end footer-copyrights -->

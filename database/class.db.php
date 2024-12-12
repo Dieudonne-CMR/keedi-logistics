@@ -16,13 +16,13 @@ class DB{
         $this->name=$name;
        }
 
-       session_start();
+    //    session_start();
         try{
 
             //========== Connexion à la base de données créée
             $this->db =new PDO('mysql:host='.$this->host.'; dbname='.$this->dbname,$this->name,$this->password,
             array(PDO::MYSQL_ATTR_INIT_COMMAND =>'SET NAMES UTF8', PDO::ATTR_ERRMODE=>PDO::ERRMODE_WARNING));
-            // die('ok');
+              //die('ok');
         }catch(PDOException $e){
             die("<h1 class='text-danger'>Desole nous avons pas pu trouver la base de donnee</h1>");
         }

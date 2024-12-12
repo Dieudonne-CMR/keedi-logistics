@@ -1,5 +1,7 @@
 <?php 
 include "api/cle_api.php";
+include "database/class.db.php";
+include "fonctions/fontion.php";
 include "includes/fonctions/fonctions.php";
 include_once('includes/main_header.php'); 
 //======
@@ -65,6 +67,14 @@ if(@$url[0]=='blog-details'):
 endif;
 
 
+//------- Route page blog
+if(@$url[0]=='saveform'):    
+    include_once("processing/$url[0].php");
+endif;
+
+if(@$url[0]=='mailer1'):    
+    include_once("processing/$url[0].php");
+endif;
 //------- Route page service
 //je viens
 /*

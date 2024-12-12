@@ -1,5 +1,5 @@
 <?php 
-// include "includes/connexion.php";
+// include "includes/.php";
 ?>
 <!doctype html>
 <html class="no-js" lang="en">
@@ -350,21 +350,34 @@
          </div>
          <div class="row margin-top5 wow fadeIn xs-margin-top-10">
             <!-- review -->
+             <?php
+              $recup= $DB->query("SELECT * FROM temoignage");
+              $part="Profil/Temoignages/";
+              foreach($recup as $result) :
+             ?> 
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
-               <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
-               <p class="center-col" style="color:white;">C'est un ouvrage pratique et pédagogique. Il couvre l'ensemble des aspects essentiels du métier, ce qui en 
-                  fait une ressource précieuse pour les transitaires, déclarants, et responsables logistiques. </p>
-               <div class="name" style="color:white;">Ricky Harvard</div>
-               <div  style="color:white;">Responsables logistiques</div>
+               <img alt="image" style="height:120px; width:150px" src="<?=$part.$result->ProfilTemoignage?>">
+               <p class="center-col" style="color:white; word-wrap:break-word; overflow-wrap:break-word; word-break:break-all;"><?=$result->MessageTemoignage ?> </p>
+               <div class="name" style="color:white;"><?=$result->NomTemoignage?> </div>
+               <div  style="color:white; margin-bottom:10%;"><?=$result->ProfessionTemoignage?> </div>
+            </div>
+            <?php endforeach ?> 
+            <div class="container mt-5 bt2"> 
+               <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
             </div>
             <!-- end review class="text-gray" this class come from the last balise-->
             <!-- review -->
+            <?php /* 
             <div class="col-lg-3 col-md-6 review-section text-center xs-margin-btm-10 sm-margin-top-5" style="color:white;">
                <img alt="" src="https://img.freepik.com/free-vector/blue-circle-with-white-user_78370-4707.jpg?uid=R42397107&ga=GA1.1.1038445777.1714367562&semt=ais_hybrid">
                <p class="center-col" style="color:white;">Ce livre explique de manière simple et détaillée les bases de la douane et du transit.
                    Grâce à ses cas pratiques et son lexique.</p>
                <div class="name" style="color:white;">Sarah Miller</div>
-               <div  style="color:white;">Déclarants</div>
+               <div  style="color:white;">Déclarants
+               <div class="container mt-5 bt2"> 
+                  <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
+               </div>
+               </div>
             </div>
             <!-- end review -->
             <!-- review -->
@@ -386,35 +399,37 @@
                   <button id="showFormBtn" class="btn btn-primary">Ajouter un Témoignage</button> 
                </div>
                </div>
-            </div>
+            </div> */ ?>
             <!-- end review -->
          </div>
       </div>
       <div id="overlay" class="overlay"></div>
-      <div id="floatingForm" class="w-75 mx-auto"> 
-        <form id="myForm" class="w-75 mx-auto" enctype="multipart/form-data"> 
+      <div id="floatingForm"  class="w-75 mx-auto rounded"> 
+        <form id="myForm" class="w-75 mx-auto" action="saveform" method="post" enctype="multipart/form-data"> 
           <div class="form-group"> 
             <label for="name">Nom:</label> 
               <input type="text" class="form-control" id="name" name="name" required> 
           </div>
-          <div class="form-group"> 
-            <label for="name">Profession:</label> 
-              <input type="text" class="form-control" id="name" name="name" required> 
-          </div> 
-          <div class="form-group text-center">
-          <label for="name" class="btn btn-primary">Choisir une image</label>
-         <input type="file" class="form-control" id="name" name="name" accept="image/*" onchange="previewImage(event)">
-           </div>
+          <div class="row">          
+            <div class="form-group col-6"> 
+               <label for="name">Profession:</label> 
+               <input type="text" class="form-control" id="name" name="profession" required> 
+            </div> 
+            <div class="form-group col-6">               
+                  <label for="name">Ajouter une image:</label>              
+                  <input type="file" class="form-control" id="image" name="image" accept="image/*" onchange="previewImage(event)">
+            </div>
+         </div>
           <div class="form-group"> 
             <label for="message">Message:</label>
             <textarea class="form-control" id="message" name="message" rows="4" required>
             </textarea>
           </div> 
-          <button type="submit" class="btn btn-success">Enregistrer </button> 
+          <button type="submit" name="submit" class="btn btn-success w-100">Enregistrer </button> 
          </form> 
       </div>
    </section>
-   <!-- end review section -->
+   <!-- end review section accept="image/*" onchange="previewImage(event) -->
 
    <!-- buynow section -->
    <section id="buynow" class=" p-120">
@@ -452,12 +467,12 @@
                   <div class="col-md-4 col-sm-4 xs-margin-btm-10  xs-text-center">
                      <div class="blog-updates">
                         <div class="img-blog-updates">
-                           <a href=.titre($value->titre).'-'.$value->matricule ?>">
-                              <img src="<?=$url_image.$value->photo ?>" alt="">
+                           <a href="blog-details/<?=$value->matricule?>">
+                              <img style="" src="<?=$url_image.$value->photo ?>" alt="">
                            </a>
                         </div>
                         <div class="post-details">
-                           <a href=.titre($value->titre).'-'.$value->matricule ?>" class="post-caption"><?= $value->titre ?></a>
+                           <a href="blog-details/<?=$value->matricule?>" class="post-caption"><?= $value->titre ?></a>
                            <span class="post-author xs-margin-top4">| <strong><?= $value->date ?></strong> | <?= info_admin($value->matricule_admin)->nom ?></span>
                            <p><?= strTextLent(strip_tags($value->content), 50) ?></p>
                         </div>
@@ -538,15 +553,14 @@
                <p class="text-gray margin-top5"><?= $description ?></p>
             </div>
             <div class="offset-lg-2 col-lg-6 col-12 margin-top5">
-               <form id="contactusform" action="javascript:void(0)" method="post" action="mailer.php">
+               <form id="contactusform" method="post" onsubmit="return validateEmail()" action="mailer1">
                   <div id="alert" class="zero-lr-margin"></div>
-                  <input name="name" type="text" placeholder="votre nom" />
-                  <input name="email" type="email" placeholder="Enter Email" />
-                  <input type="text" placeholder="Entrer le numero Whatsapp" id="tel" name="tel" required>
-                  <textarea placeholder="Write your Message"  name="message"></textarea>
-                  <button id="contact-us-btn" type="submit"
-                     class="contact-btn btn sm-btn button xs-margin-btm-5 text-uppercase">Envoyer le 
-                     message</button>
+                  <input name="name" type="text" placeholder="Votre nom" />
+                  <input name="email" id="email" type="email" placeholder="Entrez L'e-mail" />
+                  <input type="tel" placeholder="Entrez le numéro Whatsapp" id="tel" name="tel" required>
+                  <textarea placeholder="Écrivez votre message"  name="message"></textarea>
+                  <button id="contact-us-btn" type="submit" name="submit" class=" rounded btn-success btn sm-btn button xs-margin-btm-5 text-uppercase">Envoyer le 
+                     message</button>  <p id="errorMessage" class="error" style="display:none;"></p>
                </form>
             </div>
          </div>
@@ -566,32 +580,25 @@
     document.getElementById('floatingForm').style.display = 'none'; 
     document.getElementById('overlay').style.display = 'none'; }); 
     document.getElementById('myForm').addEventListener('submit', function(event) { 
-    event.preventDefault(); 
+    //event.preventDefault(); 
     // Empêche l'envoi réel du formulaire 
     alert('Formulaire enregistré avec succès!'); 
     document.getElementById('floatingForm').style.display = 'none'; 
     document.getElementById('overlay').style.display = 'none'; }); 
     </script>
-    <script>
-  // Fonction pour prévisualiser l'image téléchargée
-  function previewImage(event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function(e) {
-        const profileImg = document.getElementById('profileImg');
-        profileImg.src = e.target.result;
-      };
-      reader.readAsDataURL(file);
+<script>
+    function previewImage(event) {
+        var reader = new FileReader();
+        reader.onload = function() {
+            var output = document.createElement('img');
+            output.src = reader.result;
+            document.body.appendChild(output); // Afficher l'image prévisualisée (facultatif)
+        };
+        reader.readAsDataURL(event.target.files[0]);
     }
-  }
-
-  // Event listener pour ouvrir le champ de fichier lorsque l'image par défaut est cliquée
-  document.getElementById('profileImg').addEventListener('click', function() {
-    document.getElementById('profileImage').click();
-  });
 </script>
    <!-- javaScripts -->
+   <script type="text/javascript" src="js/verifemail.js"></script>
    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
    <script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
    <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>

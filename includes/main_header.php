@@ -15,7 +15,7 @@
 // $profile="../../@ressouce/profile/";
 
 
-$chemin; //------ dossier des image des poste;
+$chemin=$url_image; //------ dossier des image des poste;
 $chin_logo; //------- dossier des logo de l'entreprise;
 $img_partage;//------ dossier des logo des partenaires;
 $img_document; //------dossiers des documents de l'entreprise;
