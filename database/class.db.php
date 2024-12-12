@@ -55,5 +55,21 @@ class DB{
 $DB=new DB();
 // $Db=$DB->db;
 
+
+
+
+//  $DB->query("INSERT INTO membre (Nom,Localisation, Telephone,Matricule,Mat_shop, Role, password) 
+//         VALUES(:Nom, :Localisation, :Telephone, :Matricule, :Mat_shop, :Role, :password)",
+
+//           [
+//             'Nom'=>$nom_boutik,
+//             'Localisation'=>$localisation_gerant,
+//             'Telephone'=>$telephone_gerant,
+//             'Matricule'=>$mat_gerant,
+//             'Mat_shop'=>$mat_boutik,
+//             'Role'=> $role,
+//             'password'=>$password,
+//           ] );
+
 ?>
 

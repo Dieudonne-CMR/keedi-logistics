@@ -4,7 +4,6 @@ include "includes/fonctions/fonctions.php";
 include_once('includes/main_header.php'); 
 //======
 
-
 $url="";
 
 //====== Traitement de url

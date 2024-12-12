@@ -87,3 +87,4 @@ function select_table_where($nom_table, $nom_champ, $val)
     $recup = $DB->query("SELECT * FROM $nom_table WHERE $nom_champ = :var", array("var" => $val));
     return $recup;
 }
+
